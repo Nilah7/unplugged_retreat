@@ -1,3 +1,4 @@
+
 /*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
 
 /*
@@ -106,12 +107,15 @@ html {
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
+    color: #e2e3ed;
     text-align: left;
 }
 
 ul,
 ol {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -121,12 +125,14 @@ a {
 
 h2 {
     font-family: 'Poppins', sans-serif;
+    font-weight: 500;
     font-size: 1.875em;
 }
 
 h3,
 h4 {
     font-family: 'Poppins', sans-serif;
+    font-weight: 500;
     font-size: 1.125em;
     margin: 20px 0;
 }
@@ -137,11 +143,11 @@ p {
 }
 
 img {
-
+    width: 100%;
 }
 
 figure {
-
+    margin: 0;
 }
 
 address {
@@ -155,17 +161,13 @@ address {
    
 /* --------------Base Header - Footer Styles --------------*/
 
-header,
-footer {
-
-}
-
 /* Header styles */
 
 header {
     display: flex;
     justify-content: center;
     padding: 15px 0;
+    background-color: #202322;
 }
 
 header .content-wrapper {
@@ -176,7 +178,12 @@ header .content-wrapper {
     margin: 0;
 }
 
-header-divider {
+header figure {
+    width: 60%;
+}
+
+.header-divider {
+    background: #3a3a3a;
     width: 100%;
     height: 1px;
     margin: 10px 0 20px 0;
@@ -184,12 +191,20 @@ header-divider {
 
 header nav {
     width: 60%;
+    font-size: 1.125em;
+    font-weight: 700;
+    text-transform: uppercase;
 }
+
 header nav ul {
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
+
+header nav ul li {
+    font-size: 1.125em;
+  }
 
 /* Footer */
 
@@ -198,6 +213,7 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-color: #202322;
 }
  
 footer p {
@@ -206,7 +222,6 @@ footer p {
 
 footer .content-wrapper {
     width: 55%;
-    margin: 50px 0;
 }
 
 footer .contact {
@@ -220,34 +235,84 @@ footer .social-icons {
 }
 
 footer .social-icons p {
+    background-color: #527158;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+footer .social-icons p i {
+    font-size: 1.3125;
+    
+}
 footer .copyright {
     margin: 20px 0;
 }
 
 /* --------------Mobile Styles - Homepage -------------*/
 
+
 /* Hero Area */
 
 .hero-area {
+    background-image: url(../img/unplugged-retreat.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
     display: flex;
     justify-content: center;
+}
+
+.hero-area h1 {
+    font-size: 2.25em;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
 }
 
 /* Aside */
 
 aside {
+    background-color: #527158;
     display: flex;
     justify-content: center;
 }
 
+aside .form {
+    margin-top: 30px;
+  }
+  
+  input[type=text] {
+    box-sizing: border-box;
+    width: 100%;
+    color: #2a423a;
+    font-style: italic;
+    padding: 1em;
+  }
+  
+  input[type=button] {
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 20px;
+    background-color: #2a423a;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 1.125em;
+    color: #e2e3ed;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
 /* Features */
 
 .features {
+    background: url('../img/unplugged-retreat-features.jpg');
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
 }
@@ -268,19 +333,27 @@ aside {
     flex-flow: row wrap;
 }
 
+.features i {
+    font-size: 3.75;
+    margin-bottom: 40px;
+}
+
 .features p {
+    text-align: center;
     margin: 0;
 }
+
 /* Reviews */
 
 .reviews {
+    background-color: #2a423a;
     display: flex;
     justify-content: center;
 }
 
 .reviews h2 {
     margin-bottom: 40px;
-
+    line-height: 1;
 }
 
 .reviews h3 {
@@ -295,13 +368,30 @@ aside {
     -------------------------------------------------------------------------
     -------------------------------------------------------------
     --- */
-
-.mission {
+ .mission {
+    background-color: #527158;
     display: flex;
     justify-content: center;
+    }
+
+.map figure{
+    position: relative;
+    padding-bottom: 125%;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+}
+
+.map iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .contact-section {
+    background-color: #2a423a;
     display: flex;
     justify-content: center;
 }
@@ -319,6 +409,7 @@ aside {
     ----*/
 
 .faq {
+    background-color: #527158;
     display: flex;
     justify-content: center;
 }
@@ -333,16 +424,16 @@ aside {
 
 .faq h2 {
     margin-bottom: 40px;
+    line-height: 1;
 }
 
 .faq-content {
     margin-bottom: 50px;
 }
 
-
-
-
-
+.faq-content h4 {
+    line-height: 1.333;
+  }
 
 /* ==========================================================================
    Helper classes
@@ -438,6 +529,16 @@ aside {
         margin: 100px 0;
     }
 
+h2 {
+    font-size: 2.25em;
+    line-height: 1.333;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.25;
+}
+
 /* Header */
 
 header {
@@ -447,6 +548,10 @@ header {
 header .content-wrapper {
     width: 100%
     justify-content: space-between;
+}
+
+header figure {
+    width: 30%;
 }
 
 header nav {
@@ -462,6 +567,16 @@ header nav ul {
 }
 
 /* Hero Area */
+
+.hero-area {
+    min-height: 600px;
+}
+
+.hero-area h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin: 0;
+}
 
 /* Aside */
 aside .content-wrapper {
@@ -479,6 +594,10 @@ aside .content-wrapper .form {
 
 /* Features */
 
+.features h2 {
+    margin-bottom: 20px;
+}
+
 .features article {
     display: flex;
     align-items: center;
@@ -487,7 +606,7 @@ aside .content-wrapper .form {
 }
 
 .features .features-item-description {
-    width: 50%;
+    width: 62%;
 }
 
 /* Reviews */
@@ -496,24 +615,43 @@ aside .content-wrapper .form {
     justify-content: space-between;
 }
 
+.reviews h2 {
+    width: 85%;
+}
+
+.reviews article figure,
 .reviews article div {
     width: 49%;
+}
+
+.reviews h3 {
+    width: 75%;
+    margin: 0;
 }
 
 /* Footer */
 footer .content-wrapper {
     width: 65%;
-    margin: 100px 0;
 }
 
-.footer-content {
+footer .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center
+    flex-direction: row;
 }
 
 footer .contact {
     margin-bottom: 0;
+}
+
+footer h4 {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+footer p {
+    line-height: 1.285;
 }
 
 footer .copyright {
@@ -537,6 +675,10 @@ footer .copyright {
         width: 45%;
     }
 
+    .map figure{
+        padding-bottom: 45.5%;
+    }
+    
     .contact-section .content-wrapper h2 {
         width: 80%;
     }
@@ -545,6 +687,10 @@ footer .copyright {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+    }
+
+    .contact-content h4 {
+        font-size: 1.5em;
     }
 
 /* ================================================================
@@ -565,6 +711,13 @@ footer .copyright {
     width: 100%;
 }
 
+.faq h4,
+.faq p {
+    font-size: .875em;
+    line-height: 1.125;
+}
+}
+
 @media only screen and (min-width: 1200px) {
     /*Desktop styles here*/
 
@@ -579,9 +732,23 @@ footer .copyright {
             padding: 15px 0;
         }
 
+        h2 {
+            font-size: 2.25em;
+        }
+
+        h3,
+        h4 {
+            font-size: 1.875em;
+        }
+
+        p {
+            font-size: 1.125em;
+            line-height: 1.333;
+        }
 
         /* Hero */
         .hero-area h1 {
+            font-size: 3.75em;
             width: 80%;
         }
 
@@ -592,10 +759,11 @@ footer .copyright {
 
         aside .content-wrapper .form-description,
         aside .content-wrapper .form (
-            width: 30%;
+            width: 40%;
         )
 
         /* Features */
+
         .features h2 {
             width: 90%
         }
@@ -605,18 +773,36 @@ footer .copyright {
         }
 
         /* Reviews */
+
+        .reviews h2 {
+            padding-bottom: 50px;
+        }
         .reviews article div {
             width: 42%
         }
 
+        footer h4 {
+            font-size: 1.875em;
+        }
+        
         /* ================================================================
             About Page
             ==========================================================================
         */
+
+        .map figure{
+            padding-bottom: 37.5%;
+        }
+
         .mission h2,
         .contact-section .content-wrapper h2 {
             width: 95%;
+            font-size: 3em;
         }
+
+       .contact-content h4 {
+            font-size: 1.875em;
+       }
 
         /* ==========================================================================
             FAQ Page
@@ -624,9 +810,17 @@ footer .copyright {
         */
             .faq h2 {
                 width: 100%;
+                font-size: 3em;
             }
         
+            .faq h4,
+            .faq p {
+                font-size: 1.125em;
+                line-height: 1;
+            }
         }
+
+
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
